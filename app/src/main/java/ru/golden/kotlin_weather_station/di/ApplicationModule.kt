@@ -16,4 +16,5 @@ internal interface ApplicationModule {
 	@ContributesAndroidInjector(modules = [CitiesModule::class])
 	fun citiesActivityInjector(): CitiesActivity
 
+
 }
