@@ -19,4 +19,10 @@ class CitiesFragment : BaseFragment<FragmentCitiesBinding>() {
 	}
 
 	override fun initViewModel(state: Bundle?) = viewModel.onBind()
+
+	override fun onDestroy() {
+		super.onDestroy()
+
+		viewModel.onUnbind()
+	}
 }

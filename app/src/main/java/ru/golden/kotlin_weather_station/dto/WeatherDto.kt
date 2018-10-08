@@ -1,7 +1,5 @@
 package ru.golden.kotlin_weather_station.dto
 
-import java.io.Serializable
-
 data class WeatherDto(
 	val coord: Coord?,
 	val weather: List<Weather>?,
@@ -16,4 +14,4 @@ data class WeatherDto(
 	val name: String,
 	val cod: Int?,
 	val lastUpdate: String?
-) : Serializable
+)

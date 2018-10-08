@@ -11,10 +11,10 @@ class CitiesActivity : BaseActivity() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_cities)
 
-		loadCurrentCities()
+		showCurrentCities()
 	}
 
-	private fun loadCurrentCities() {
+	private fun showCurrentCities() {
 		supportFragmentManager.start(CitiesFragment(), R.id.fragmentContainer)
 	}
 }
