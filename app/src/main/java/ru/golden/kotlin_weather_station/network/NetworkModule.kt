@@ -19,4 +19,8 @@ class NetworkModule {
 	@ApplicationScope
 	@ApiEndpoint
 	fun provideApiEndpoint(): String = API
+
+	@Provides
+	@ApplicationScope
+	fun provideGetWeatherApi(retrofit: Retrofit): GetWeatherForCityApi = retrofit.create(GetWeatherForCityApi::class.java)
 }

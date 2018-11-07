@@ -14,7 +14,7 @@ class CitiesViewModel @Inject constructor(
 
 	private var getCityByNameDisposable: Disposable? = null
 
-	//TODO make useCase for getting from db and use it first
+	//TODO make useCase for getting from db and use it first, if list is empty -> load Moscow
 	override fun onBind(state: Bundle?) {
 		getCityByNameDisposable = getCityByNameUseCase.execute("")
 			.observeOn(AndroidSchedulers.mainThread())

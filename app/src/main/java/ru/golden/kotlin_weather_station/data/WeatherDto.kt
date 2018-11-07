@@ -1,4 +1,4 @@
-package ru.golden.kotlin_weather_station.dto
+package ru.golden.kotlin_weather_station.data
 
 data class WeatherDto(
 	val coord: Coord?,

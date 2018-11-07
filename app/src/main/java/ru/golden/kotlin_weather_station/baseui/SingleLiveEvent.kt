@@ -19,7 +19,6 @@ import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Observer
 import android.support.annotation.MainThread
-import junit.framework.TestSuite.*
 
 import java.util.concurrent.atomic.AtomicBoolean
 
@@ -31,7 +30,8 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
 	override fun observe(owner: LifecycleOwner, observer: Observer<T>) {
 
 		if (hasActiveObservers()) {
-			warning("Multiple observers registered but only one will be notified of changes.")
+			//TODO make log extensions and use it
+			//warning("Multiple observers registered but only one will be notified of changes.")
 		}
 
 		super.observe(owner, Observer { t ->

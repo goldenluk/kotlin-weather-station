@@ -15,7 +15,10 @@ data class WeatherEntity (
 
 	@NonNull
 	@ColumnInfo(name = "temperature")
-	val temperature: String
+	val temperature: String,
 
+	@NonNull
+	@ColumnInfo(name = "pressure")
+	val pressure: String
 	//TODO add another fields
 )

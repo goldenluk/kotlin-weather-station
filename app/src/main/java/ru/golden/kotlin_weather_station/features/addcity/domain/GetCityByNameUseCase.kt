@@ -16,8 +16,10 @@ class GetCityByNameUseCaseImpl @Inject constructor(
 
 	override fun execute(name: String): Single<WeatherItem> =
 		citiesNetworkRepository.getCityByName(name)
-			.map { city -> WeatherEntity(city.name, city.main?.temp.toString()) }
-			//TODO save to db and make converters
+			//TODO make a converter
+			//TODO check nullabilities of api answers
+			.map { city -> WeatherEntity(city.name, city.main?.temp.toString(), city.main?.pressure.toString()) }
+			//TODO save to db
 			.map { entity -> WeatherItem(entity.name, entity.temperature) }
 			.subscribeOn(Schedulers.io())
 }
